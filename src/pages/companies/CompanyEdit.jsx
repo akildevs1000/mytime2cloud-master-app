@@ -14,7 +14,7 @@ const TABS = [
   { id: 'contact',  label: 'Contact Person', icon: 'users' },
   { id: 'geo',      label: 'Geographic',     icon: 'pin' },
   { id: 'security', label: 'Security',       icon: 'lock' },
-  { id: 'payments', label: 'Payments',       icon: 'payment' },
+  // { id: 'payments', label: 'Payments',       icon: 'payment' },
   // { id: 'whatsapp', label: 'WhatsApp',       icon: 'whatsapp' },
   // { id: 'modules',  label: 'Modules',        icon: 'module' },
 ]
@@ -103,6 +103,8 @@ function TabContent({ tab, state, setState, onSave, loading, notifySuccess, noti
               { label: 'Max Branches', key: 'max_branches', type: 'number', obj: 'company' },
               { label: 'Max Employees', key: 'max_employee', type: 'number', obj: 'company' },
               { label: 'Max Devices', key: 'max_devices', type: 'number', obj: 'company' },
+              { label: 'Max Mobile Devices', key: 'max_mobile_devices', type: 'number', obj: 'company' },
+              { label: 'Max Mobile Trackers', key: 'max_mobile_trackers', type: 'number', obj: 'company' },
             ].map(f => {
               const val = f.obj === 'user' ? (state.user?.[f.key] || '') : (state.company?.[f.key] || '')
               const setVal = v => {
@@ -493,6 +495,8 @@ export default function CompanyEdit() {
         fd.append('max_employee', state.company.max_employee || '')
         fd.append('max_branches', state.company.max_branches || '')
         fd.append('max_devices', state.company.max_devices || '')
+        fd.append('max_mobile_devices', state.company.max_mobile_devices || '')
+        fd.append('max_mobile_trackers', state.company.max_mobile_trackers || '')
         fd.append('mol_id', state.company.mol_id || '')
         fd.append('p_o_box_no', state.company.p_o_box_no || '')
         fd.append('email', state.user.email || '')

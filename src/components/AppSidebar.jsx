@@ -4,8 +4,8 @@ import Icon from './Icon'
 const NAV_ITEMS = [
   { icon: 'home',      label: 'Dashboard', to: '/dashboard' },
   { icon: 'companies', label: 'Companies', to: '/companies' },
-  { icon: 'payment',   label: 'Payments',  to: '/payments'  },
-  { icon: 'invoice',   label: 'Invoices',  to: '/invoices'  },
+  // { icon: 'payment',   label: 'Payments',  to: '/payments'  },
+  // { icon: 'invoice',   label: 'Invoices',  to: '/invoices'  },
 ]
 
 export default function AppSidebar() {
