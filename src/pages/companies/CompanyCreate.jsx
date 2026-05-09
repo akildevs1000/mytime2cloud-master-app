@@ -64,7 +64,7 @@ export default function CompanyCreate() {
 
   const [company, setCompany] = useState({
     name: '', email: '', member_from: '', expiry: '',
-    max_branches: '', max_employee: '', max_devices: ''
+    max_branches: '', max_employee: '', max_devices: '', max_mobile_devices: '', max_mobile_trackers: ''
   })
   const [contact, setContact] = useState({ name: '', number: '', position: '', whatsapp: '' })
   const [geo, setGeo] = useState({ lat: '', lon: '', location: '' })
@@ -141,6 +141,8 @@ export default function CompanyCreate() {
       fd.append('max_branches', company.max_branches)
       fd.append('max_employee', company.max_employee)
       fd.append('max_devices', company.max_devices)
+      fd.append('max_mobile_devices', company.max_mobile_devices)
+      fd.append('max_mobile_trackers', company.max_mobile_trackers)
       fd.append('contact_name', contact.name)
       fd.append('number', contact.number)
       fd.append('position', contact.position)
@@ -212,6 +214,8 @@ export default function CompanyCreate() {
                     { label: 'Max Branches *', key: 'max_branches', type: 'number' },
                     { label: 'Max Employees *', key: 'max_employee', type: 'number' },
                     { label: 'Max Devices *', key: 'max_devices', type: 'number' },
+                    { label: 'Max Mobile Devices *', key: 'max_mobile_devices', type: 'number' },
+                    { label: 'Max Mobile Trackers *', key: 'max_mobile_trackers', type: 'number' },
                   ].map(f => (
                     <div key={f.key} className="field">
                       <label>{f.label}</label>

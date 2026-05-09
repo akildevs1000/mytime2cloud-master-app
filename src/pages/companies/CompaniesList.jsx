@@ -171,6 +171,10 @@ function CompanyDetail({ company, onEdit, onDelete }) {
               <DetailField label="Max Employees" value={c.max_employee} />
               <DetailField label="Max Devices"   value={c.max_devices} />
             </div>
+            <div className="grid-2">
+              <DetailField label="Max Mobile Devices"  value={c.max_mobile_devices} />
+              <DetailField label="Max Mobile Trackers" value={c.max_mobile_trackers} />
+            </div>
           </div>
         )}
         {tab === 'contact' && (
